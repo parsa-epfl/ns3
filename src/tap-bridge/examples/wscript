@@ -7,6 +7,8 @@ def build(bld):
         obj.source = 'tap-csma.cc'
         obj = bld.create_ns3_program('tap-csma-virtual-machine', ['csma', 'tap-bridge', 'internet'])
         obj.source = 'tap-csma-virtual-machine.cc'
+        obj = bld.create_ns3_program('tap-csma-virtual-machine-parsa', ['csma', 'tap-bridge', 'internet'])
+        obj.source = 'tap-csma-virtual-machine-parsa.cc'
         bld.register_ns3_script('tap-csma-virtual-machine.py', ['csma', 'tap-bridge', 'internet'])
         obj = bld.create_ns3_program('tap-wifi-virtual-machine', ['csma', 'tap-bridge', 'internet', 'wifi', 'mobility'])
         obj.source = 'tap-wifi-virtual-machine.cc'
